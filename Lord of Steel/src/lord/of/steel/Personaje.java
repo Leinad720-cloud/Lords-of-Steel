@@ -19,15 +19,18 @@ public class Personaje {
     protected int niv;
     
     //Caracteriscas derivadas
-    protected double ps;
-    protected double pd;
-    protected double pe;
-    protected double pa;
+    protected int ps;
+    protected int pd;
+    protected int pe;
+    protected int pa;
     
+    //Nom
+    protected String nom;
     
     public Personaje(int forca, int constitucio, 
                       int velocitat, int intelligencia, 
-                      int sort,Arma arma, int pex, int niv){
+                      int sort,Arma arma, int pex, int niv, String nom){
+        this.nom = nom;
         this.forca = forca;
         this.constitucio = constitucio;
         this.velocitat = velocitat;
@@ -75,39 +78,39 @@ public class Personaje {
                 return Integer.MAX_VALUE;
         }
     }
-    public double getForca() {
+    public int getForca() {
         return forca;
     }
 
-    public double getConstitucio() {
+    public int getConstitucio() {
         return constitucio;
     }
 
-    public double getVelocitat() {
+    public int getVelocitat() {
         return velocitat;
     }
 
-    public double getIntelligencia() {
+    public int getIntelligencia() {
         return intelligencia;
     }
 
-    public double getSort() {
+    public int getSort() {
         return sort;
     }
 
-    public double getPs() {
+    public int getPs() {
         return ps;
     }
 
-    public double getPd() {
+    public int getPd() {
         return pd;
     }
 
-    public double getPe() {
+    public int getPe() {
         return pe;
     }
 
-    public double getPa() {
+    public int getPa() {
         return pa;
     }
 
@@ -118,4 +121,13 @@ public class Personaje {
     public void setArma(Arma arma) {
         this.arma = arma;
     }
+    
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+    
 }
